@@ -5,7 +5,7 @@ pipeline {
 
  stages {
 
- stage('Built') {
+ stage('Build') {
        steps {
           sh 'mvn package'
        }
@@ -13,6 +13,7 @@ pipeline {
   stage('Unit Tests') {
         steps {
            echo 'Unit Tests'
+           // sh 'mvn test'
         }
    }
    stage('Code Analysis') {
